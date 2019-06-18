@@ -1,8 +1,10 @@
 
-def my_each(array)
-  empty_array = []
-  counter = 0
-my_collect(empty_array) do  |x|
-    counter += 1
-  end
+def my_collect(array)
+  i = 0 
+  new_array = []
+  while i < array.length 
+  new_array << yield(array[i])
+  i+= 1
+end 
+new_array
 end
